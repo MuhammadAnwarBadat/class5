@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ValueContext from './ValueContext';
 
-function Child(Props) {
+function Child() {
+  let value = useContext(ValueContext);
+  console.log("value", value);
   return (
     <div>
-      Child Number {Props.num}
+      Child Number {value[0]}
+      <br/>
+      <button onClick={()=> { value[1](++value[0]) }}>Update Value</button>
     </div>
   );
 }
