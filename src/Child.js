@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import ValueContext from './ValueContext';
 
 function Child() {
